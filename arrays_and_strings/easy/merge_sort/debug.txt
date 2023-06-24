@@ -1,0 +1,27 @@
+#####################################
+
+nums1 = [-1,0,0,0,3,0,0,0,0,0,0]
+nums2 = [-1,-1,0,0,1,2]
+
+m = 5
+n = 6
+
+>>> wrong = [-1,-1,-1,0,0,0,0,1,2,3,0]
+>>> right = [-1,-1,-1,0,0,0,0,0,1,2,3]
+>>> misaligned_indices = [i for i in range(wrong) if wrong[i] != right[i]]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'list' object cannot be interpreted as an integer
+>>> misaligned_indices = [i for i in range(len(wrong)) if wrong[i] != right[i]]
+>>> misaligned_indices
+[7, 8, 9, 10]
+>>> len(wrong)
+11
+>>> wrong[len(wrong)-4:]
+[1, 2, 3, 0]
+>>> right[len(right)-4:]
+[0, 1, 2, 3]
+>>>
+
+
+#####################################
