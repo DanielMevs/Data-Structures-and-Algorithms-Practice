@@ -1,8 +1,8 @@
-nums1 = [1,2,3,0,0,0]
-nums2 = [2,5,6]
+nums1 = [-1,0,1,1,0,0,0,0,0]
+nums2 = [-1,0,2,2,3]
 
-m = 3
-n = 3
+m = 4
+n = 5
 
 print(f'original nums1: {nums1}')
 print(f'nums2: {nums2}')
@@ -88,6 +88,10 @@ def merge(nums1, m, nums2, n):
                         try:
                             nums1[i + 1:] = nums1[i: -1]
                             nums1[i+1] = num
+                            while nums1[i] < nums1[i - 1]:
+                                temp = nums1[i]
+                                nums1[i] = num
+                                nums1[i+1] = temp
                         except IndexError:
                             nums1[i] = num
                     else:
@@ -137,4 +141,4 @@ def merge(nums1, m, nums2, n):
 
 
 merge(nums1, m, nums2, n)
-print(f'Expected output: {[1,2,2,3,5,6]}')
+print(f'Expected output: {[-1,-1,0,0,1,1,2,2,3]}')
