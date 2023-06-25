@@ -1,8 +1,8 @@
-nums1 = [-1,0,1,1,0,0,0,0,0]
-nums2 = [-1,0,2,2,3]
+nums1 = [-1,1,0,0,0,0,0,0]
+nums2 = [-1,0,1,1,2,3]
 
-m = 4
-n = 5
+m = 2
+n = 6
 
 print(f'original nums1: {nums1}')
 print(f'nums2: {nums2}')
@@ -84,17 +84,48 @@ def merge(nums1, m, nums2, n):
             elif num > nums1[i]:
                 if i > n:
                     print('I am tall')
+                    
                     if num > nums1[i] and n != m:
                         try:
-                            nums1[i + 1:] = nums1[i: -1]
-                            nums1[i+1] = num
-                            while nums1[i] < nums1[i - 1]:
-                                temp = nums1[i]
-                                nums1[i] = num
-                                nums1[i+1] = temp
+                            j = i
+                            if nums1[i] == nums1[i + 1] and nums1[i] != 0:
+                                print('...and steadfast.')
+                                nums1[i + 1:] = nums1[i: -1]
+                                nums1[i+1] = num
+                                j += 1
+                                while nums1[j+1] < num and nums1[j+1] != 0:
+                                    print('...and courageous')
+                                    print(f'nums1: {nums1}')
+                                    print(f'j: {j}')
+                                    print(f'nums1[j]: {nums1[j]}')
+                                    temp = nums1[j+1]
+                                    nums1[j+1] = num
+                                    nums1[j] = temp
+                                    j += 1
+                            else:
+                                
+                                print('...and wise.')
+                                nums1[i + 1:] = nums1[i: -1]
+                                print(f'nums1[i]: {nums1[i]}')
+                                print(f'nums1[i + 1]: {nums1[i + 1]}')
+
+                                nums1[i + 1] = num
+                                while nums1[j] < nums1[j - 1] and nums1[j-1] != 0:
+                                    print('...and brave')
+                                    print(f'nums1: {nums1}')
+                                    print(f'j: {j}')
+                                    print(f'nums1[j]: {nums1[j]}')
+                                    temp = nums1[j -1]
+                                    nums1[j-1] = num
+                                    nums1[j] = temp
+                                    j -= 1
+                            
+
                         except IndexError:
+                            print('...and loud')
                             nums1[i] = num
                     else:
+                        print('...and cunning')
                         nums1[i] = num
                     
                     is_placed = True
@@ -141,4 +172,4 @@ def merge(nums1, m, nums2, n):
 
 
 merge(nums1, m, nums2, n)
-print(f'Expected output: {[-1,-1,0,0,1,1,2,2,3]}')
+print(f'Expected output: {[-1,-1,0,1,1,1,2,3]}')
