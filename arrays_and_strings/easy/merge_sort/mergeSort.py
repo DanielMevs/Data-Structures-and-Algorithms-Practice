@@ -1,8 +1,15 @@
-nums1 = [-1,0,0,0,3,0,0,0,0,0,0]
-nums2 = [-1,-1,0,0,1,2]
+nums1 = [1,2,3,0,0,0]
+nums2 = [2,5,6]
 
-m = 5
-n = 6
+m = 3
+n = 3
+
+print(f'original nums1: {nums1}')
+print(f'nums2: {nums2}')
+print(f'n: {n}')
+print(f'm: {m}')
+print('_'*20+'\n')
+
 
 
 def merge(nums1, m, nums2, n):
@@ -77,14 +84,22 @@ def merge(nums1, m, nums2, n):
             elif num > nums1[i]:
                 if i > n:
                     print('I am tall')
-                    nums1[i] = num
-                    i += 1
+                    if num > nums1[i] and n != m:
+                        try:
+                            nums1[i + 1:] = nums1[i: -1]
+                            nums1[i+1] = num
+                        except IndexError:
+                            nums1[i] = num
+                    else:
+                        nums1[i] = num
+                    
                     is_placed = True
 
                     print(f'nums1: {nums1}')
                     print(f'num: {num}')
                     print(f'i: {i}')
                     print('_'*20)
+                    i += 1
 
                 else:
                     print('I am there')
@@ -122,4 +137,4 @@ def merge(nums1, m, nums2, n):
 
 
 merge(nums1, m, nums2, n)
-print(f'Expected output: {[-1,-1,-1,0,0,0,0,0,1,2,3]}')
+print(f'Expected output: {[1,2,2,3,5,6]}')
