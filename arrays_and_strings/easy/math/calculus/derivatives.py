@@ -25,12 +25,14 @@ g = np.cos(x)
 
 d2_dx2 = FinDiff(0, dx, 2)
 
+'''
+The arrays result_f and result_g have the same shape as 
+the arrays f and g and contain the values of the second derivatives
+'''
+
 result_f = d2_dx2(f)
 result_g = d2_dx2(g)
 
 
-'''
-The arrays result_fand result_g have the same shape as 
-the arrays f and g and contain the values of the second derivatives
-'''
+
 
