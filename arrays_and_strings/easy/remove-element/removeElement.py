@@ -15,23 +15,22 @@ class Solution(object):
         count = 0
         i = 0
         while i < len(self.nums):
-            if self.nums[i] == self.val:
-                while self.nums[i] == self.val:
-                    print(f'num: {self.nums[i]}')
-                    self.nums.pop(i)
-                    print(f'i: {i}')
-                    print('-'*20)
-                    count += 1
-                    i -= 1
-                
-                
-                
-                
-            else:
+            while self.nums[i] == self.val:
                 print(f'num: {self.nums[i]}')
+                self.nums.pop(i)
                 print(f'i: {i}')
                 print('-'*20)
-                i +=1
+                count += 1
+                i -= 1
+                
+                
+                
+                
+
+            print(f'num: {self.nums[i]}')
+            print(f'i: {i}')
+            print('-'*20)
+            i +=1
         return count
 
 
