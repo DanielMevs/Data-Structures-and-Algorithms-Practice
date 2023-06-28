@@ -1,0 +1,15 @@
+Give k = the number of values in the array that do not have the target value,
+keep a pointer; call it count.
+
+Incriment count every time nums at i does not equal the target value.
+Then, swap the number at num at i and num at count. If there did occur
+a case where nums at i did equal the target value, then count would have
+been omitted. Thus, the next time nums at i is not equal the the target 
+value, the index of count will automatically point to the number needing 
+to be replaced. The effect is that all the values toward the begining 
+of the array get populated with the first k values.
+
+My initial attempt consider the case where the value of nums at i
+was equal to the target value and could remove all values equal
+to i. However, I did not take into account placing all non-target-valued
+integers in the first k placed of the array. 
