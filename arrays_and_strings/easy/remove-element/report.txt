@@ -1,4 +1,4 @@
-Give k = the number of values in the array that do not have the target value,
+Given k = the number of values in the array that do not have the target value,
 keep a pointer; call it count.
 
 Incriment count every time nums at i does not equal the target value.
