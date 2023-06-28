@@ -1,15 +1,18 @@
-Given k = the number of values in the array that do not have the target value,
-keep a pointer; call it count.
+Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.
 
-Incriment count every time nums at i does not equal the target value.
-Then, swap the number at num at i and num at count. If there did occur
-a case where nums at i did equal the target value, then count would have
-been omitted. Thus, the next time nums at i is not equal the the target 
-value, the index of count will automatically point to the number needing 
-to be replaced. The effect is that all the values toward the begining 
+Let k = the number of values
+in the array that do not have the target value, val.
+Keep a pointer; call it count.
+
+Incriment count every time nums at i does not equal val.
+Then, swap the number at nums at i and nums at count. If there did occur
+a case where nums at i did equal val, then count would have
+been omitted. Thus, the next time nums at i is not equal to val, the
+index of count will automatically point to an occurence of val. What unravels
+is that all the values toward the begining 
 of the array get populated with the first k values.
 
 My initial attempt consider the case where the value of nums at i
 was equal to the target value and could remove all values equal
-to i. However, I did not take into account placing all non-target-valued
-integers in the first k indices of the array. 
+to i. However, I did not take into account placing all occurrences
+of non-val integers in the first k indices of the array. 
