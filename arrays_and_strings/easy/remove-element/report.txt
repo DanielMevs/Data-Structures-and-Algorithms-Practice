@@ -12,4 +12,4 @@ of the array get populated with the first k values.
 My initial attempt consider the case where the value of nums at i
 was equal to the target value and could remove all values equal
 to i. However, I did not take into account placing all non-target-valued
-integers in the first k placed of the array. 
+integers in the first k indices of the array. 
