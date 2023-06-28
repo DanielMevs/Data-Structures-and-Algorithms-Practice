@@ -1,7 +1,7 @@
 Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.
 
 Let k = the number of values
-in the array that do not have the target value, val.
+in the array that are not equal to the target value, val.
 Keep a pointer; call it count.
 
 Incriment count every time nums at i does not equal val.
@@ -12,7 +12,7 @@ index of count will automatically point to an occurence of val. What unravels
 is that all the values toward the begining 
 of the array get populated with the first k values.
 
-My initial attempt consider the case where the value of nums at i
+My initial attempt considered the case where the value of nums at i
 was equal to the target value and could remove all values equal
 to i. However, I did not take into account placing all occurrences
 of non-val integers in the first k indices of the array. 
