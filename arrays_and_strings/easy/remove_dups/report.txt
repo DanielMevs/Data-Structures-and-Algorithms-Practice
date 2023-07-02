@@ -13,4 +13,14 @@ the resulting nums will contain only unique numbers and the
 length of that array will equal the number of unique numbers
 in nums.
 
+To this end, it is important to note that when using the 
+for-each-type Python syntax to iterate over an array that 
+you use call list() on the array 
+(i.e. for num in list(array_of_nums): pass)
+When you are editing the list while looping through its 
+elements, it causes confusion as to want range should be 
+iterated over as this range is based on the length, which
+the loop assumes is fixed at first. Wrapping list() around
+your array will help to mitigate any index-related errors 
+that may consequently arise.
 
