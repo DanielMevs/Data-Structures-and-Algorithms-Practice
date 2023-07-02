@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: int
         """
         unique_nums = []
-        for num in nums:
+        for num in list(nums):
             if num not in unique_nums:
                 unique_nums.append(num)
                 print(f'num: {num}')

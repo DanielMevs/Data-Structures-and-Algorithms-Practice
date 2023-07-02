@@ -1,0 +1,16 @@
+Given an integer array nums sorted in non-decreasing order, 
+remove the duplicates in-place such that each unique element 
+appears only once.
+
+For this problem, I wanted to start by iterating over the 
+array nums. The current number in the iteration was called num.
+If I ran into a new digit, I would add it to 
+a list of already seen nodes called unique_nums. However,
+if num wasn't in the unique list, I would use .index to get 
+the index of the first instance of that node and use it to 
+pop it off of nums at that index. This measure ensures that
+the resulting nums will contain only unique numbers and the
+length of that array will equal the number of unique numbers
+in nums.
+
+
