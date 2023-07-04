@@ -1,0 +1,19 @@
+Given an array nums of size n, return the majority element.
+
+For this problem, I formulated my solution around the fact
+that he majority element is the element that appears more 
+than ⌊n / 2⌋ times. Since I can assume that there must be
+a majority element, I simply kept a dictionary and tracked
+each occurence of each element and their count. I got the 
+length of nums and stored it into n. I then iterated over
+the range of n and at at each incriment, i, I had two options.
+Option one was that I explicitly check that of all the keys
+in the tracker dictionary, that nums of i was not one of them.
+If this was the case, then I would set the default value for
+tracker at that value to zero. Then I would increment the 
+count of that key by 1. In option 2, I could have used ommited 
+the if statement entirely and simply wrote 
+num_count[nums[i]] = num_count.get(nums[i], 0) + 1.
+The second argument of .get() specifies a default value
+if one is not specified. In terms of elegance, I would go
+with the later.
