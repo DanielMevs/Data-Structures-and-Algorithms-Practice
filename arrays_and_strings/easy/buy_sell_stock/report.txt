@@ -1,0 +1,31 @@
+You are given an array prices where prices[i] is the price 
+of a given stock on the ith day.
+
+For this problem, I first initialize the variable,
+max_difference to keep track of the maximum 
+profit. I also create a variable called 
+buy_min, which equals to the minimum price I can
+acquire this stock to give me the maximum profit.
+I assign it the value of the first element in nums
+because I intend to start my iteration at the second
+element. If the first element in the iteration is less
+than the minimum stock aquisition price, then I update
+that pointer to that element, and handle each iteration 
+accordingly. 
+
+I also take the difference between the current price 
+and the minimum aquisition price. If this difference is
+greater than the maximum. After iterating to the end, the
+resulting value for max_diff will equal the maximum 
+profit.
+
+When I first was trying to solve it, I focused on making my
+solution fit the input given in the example, 
+prices = [7,1,5,3,6,4] and thus misformulated my equation
+to find the difference. To remedy the situation, I included
+an else statement that skips checking the difference if 
+the minimum price is less than the current price. Therefore,
+the max_diff was never updated to reflect this erroneous price.
+However, when the input was [1, 2], I soon realized the error
+in my formula and refactored my code to the concluding 
+solution.
