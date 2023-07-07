@@ -4,7 +4,8 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        # A tracker to find what a non-white-space sequence is found
+        # A tracker to handle the determination of finding
+        #  non-white-space sequence's first occurence
         is_found = False
         i = len(s) - 1
         count = 0
