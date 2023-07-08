@@ -9,11 +9,10 @@ class Solution(object):
         min_word = min(strs, key=len)
         
         prefix = ''
-        checker = lambda letter: letter == strs[0][i]
         for i in range(len(min_word)):
 
             prefix_tracker = []
-            
+            checker = lambda letter: letter == strs[0][i]
             for word in strs:
                 prefix_tracker.append(checker(word[i]))
             if all(prefix_tracker):
