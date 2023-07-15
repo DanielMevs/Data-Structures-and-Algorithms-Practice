@@ -7,8 +7,7 @@ class Solution:
             return
         temp = [None]*len(nums)
         for i in range(len(nums)):
-
-            temp[i] = nums[(i+k)%len(nums)]
-        nums = temp
-
-obj = Solution().rotate([1,2,3,4,5,6,7], 3)
+            temp[i] = nums[(i-(k - 0))%len(nums)]
+        for i in range(len(nums)):
+            nums[i] = temp[i]
+            

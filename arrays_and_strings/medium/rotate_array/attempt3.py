@@ -5,10 +5,8 @@ class Solution:
         """
         if len(nums) == 1:
             return
-        temp = [None]*len(nums)
+        
         for i in range(len(nums)):
-
-            temp[i] = nums[(i+k)%len(nums)]
-        nums = temp
-
-obj = Solution().rotate([1,2,3,4,5,6,7], 3)
+            temp = nums[i]
+            nums[i] = nums[(i+k)%len(nums)]
+            nums[(i+k)%len(nums)] = temp
