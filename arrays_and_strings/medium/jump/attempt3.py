@@ -5,6 +5,6 @@ class Solution:
             return True
 
         for i, num in enumerate(nums):
-            if i + num == end:
+            if i + num >= end:
                 return True
         return False
