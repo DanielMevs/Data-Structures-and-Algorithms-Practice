@@ -6,10 +6,10 @@ class Solution:
             
             tracker[num] =  [num]
             tracker = self.updateAdjacent(num, tracker)
-        return max(tracker, key=len(tracker.values()))
+        return max(tracker, key=lambda x : len(tracker[x]))
 
     
-    def updateAdjacent(target, tracker):
+    def updateAdjacent(self, target, tracker):
         for key, adjacents in tracker.items():
             if adjacents[0] == target + 1:
                 adjacents = {key: [target] + adjacents}
