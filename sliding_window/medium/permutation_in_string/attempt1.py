@@ -1,7 +1,10 @@
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
+        # if len(s1) > len(s2):
+        #     return False
+        
         s1_count = {char: s1.count(char) for char in s1}
-        print(s1_count)
+        # print(s1_count)
         left_window, right_window = 0, len(s1)
         while right_window <= len(s2):
             sub_s2 = s2[left_window: right_window]
