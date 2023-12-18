@@ -15,8 +15,9 @@ accordingly.
 
 I also take the difference between the current price 
 and the minimum aquisition price. If this difference is
-greater than the maximum. After iterating to the end, the
-resulting value for max_diff will equal the maximum 
+greater than the maximum, I update the value of the maximum
+difference, max_diff, accordingly. After iterating to the end,
+the resulting value for max_diff will equal the maximum 
 profit.
 
 When I first was trying to solve it, I focused on making my
