@@ -1,3 +1,5 @@
+# O(n) time and space
+
 class Solution:
     def subarraySum(self, nums: list[int], k: int) -> int:
         result = 0
