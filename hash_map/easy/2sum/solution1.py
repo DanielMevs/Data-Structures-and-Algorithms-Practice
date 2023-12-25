@@ -1,5 +1,6 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
+        # - Mapping value to index
         num_map = {}
         two_sum_list = []
         for i, num in enumerate(nums):
