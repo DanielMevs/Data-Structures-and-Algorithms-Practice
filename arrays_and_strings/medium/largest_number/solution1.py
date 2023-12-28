@@ -25,6 +25,7 @@ class Solution:
                 print('case 3: 0')
                 print('n1 > n2')
                 return 0
+            
             print('-' * 20)
 
         nums = sorted(nums, key=cmp_to_key(compare))
