@@ -20,13 +20,13 @@ class Solution(object):
         for word in strs:
             get_common_prefix_score(word)
 
-        
-        print(prefixCounter)
 
-        maxPrefix = max(prefixCounter.values())
-        
 
-        if len(set(prefixCounter.values())) == 1 or maxPrefix < len(strs):
+        maxPrefix = max(prefixCounter.values()) if prefixCounter else 0
+        
+        scores = prefixCounter.values()
+        
+        if (len(set(scores)) == 1 and not scores[-1]) or maxPrefix < len(strs):
             return ''
 
         
@@ -36,8 +36,3 @@ class Solution(object):
         sort_prefix = lambda k, v: (v, k)
 
         return max(prefixCounter, key=lambda tup: sort_prefix(tup[0], tup[1]))[0]
-    
-
-# strs = ["flower","flow","flight"]
-strs = ["reflower","flow","flight"]
-print(Solution().longestCommonPrefix(strs))
