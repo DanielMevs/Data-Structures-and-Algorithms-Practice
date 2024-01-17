@@ -1,0 +1,9 @@
+We iterate only the length of the  array minus k to offset the 
+fact that we are starting off with the sum of the first
+k elements minus 1. We add  one because the end range is
+not inclusive. For example, if the length of the array is
+6 and k is 3, 6 - 3 = 3; 3 + 1 = 4. 
+If we initialze currentSum with the first 2 elements (k-1), 
+then he are going to move the left pointer a maxiumum of 
+4 - 1 = 3 times before adding an element to the kth spot
+of the subarray starts giving us an index out of bounds error.
