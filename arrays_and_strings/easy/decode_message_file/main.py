@@ -7,7 +7,6 @@ def decode(message_file: str) -> str:
     result = ''
     left, right = 0, 1
     count = 1
-    levels = []
 
     with open(message_file, 'r') as f:
         for line in f:
@@ -18,21 +17,18 @@ def decode(message_file: str) -> str:
 
     
     while right <= len(lines):
-        levels.append(lines[right - 1])
+        result += lines[right -1].split()[-1] + ' '
         left = right
         count += 1
         right += count 
 
     remaining = getElementsLeftOver(len(lines), left)
     if remaining:
-        levels.append(lines[left: left + remaining])
+        result += lines[left + remaining - 1]
     
 
-    for level in levels:
-        result += level.split()[-1] + ' '
 
-
-    return result[:-1]
+    return result if remaining else result[:-1]
 
 
 if __name__ == "__main__":
