@@ -1,7 +1,3 @@
-def getElementsLeftOver(size, left):
-    return size - left
-    
-
 def decode(message_file: str) -> str:
     lines = []
     result = ''
@@ -22,7 +18,7 @@ def decode(message_file: str) -> str:
         count += 1
         right += count 
 
-    remaining = getElementsLeftOver(len(lines), left)
+    remaining = len(lines) - left
     if remaining:
         result += lines[left + remaining - 1]
     
