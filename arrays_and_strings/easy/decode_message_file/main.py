@@ -18,7 +18,7 @@ def decode(message_file: str) -> str:
 
     
     while right <= len(lines):
-        levels.append(lines[left: right])
+        levels.append(lines[right - 1])
         left = right
         count += 1
         right += count 
@@ -29,7 +29,7 @@ def decode(message_file: str) -> str:
     
 
     for level in levels:
-        result += level[-1].split()[-1] + ' '
+        result += level.split()[-1] + ' '
 
 
     return result[:-1]
