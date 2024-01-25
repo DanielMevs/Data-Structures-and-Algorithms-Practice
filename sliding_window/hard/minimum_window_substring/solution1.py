@@ -28,7 +28,7 @@ class Solution:
                     have -= 1
                 left += 1
 
-                
+
         left, right = result
 
         return s[left: right + 1] if resultLen != float('inf') else ''
