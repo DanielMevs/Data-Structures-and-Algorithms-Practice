@@ -18,3 +18,6 @@ class Solution:
                 stack.append(substr*int(k))
         
         return ''.join(stack)
+
+
+
