@@ -1,0 +1,49 @@
+All the heights are in increasing order.
+
+- If widths are in increasing order,
+      then we can compute the area of the 
+      two widths starting at the min height.
+    Note that such a configuration can only
+    extend to the right.
+
+- If we have a width of height 2, and it 
+    is followed by a width of size 1, then
+    that is not in increasing order and 
+    we can pop from the stack.
+
+- Once we pop from the stack we update
+    the max area if the popped value
+    is greater than the current max 
+    area.
+
+- We'll keep a stack keeping track of the
+    index and the height at that index.
+
+- When we assign an index value to our stack,
+    we only assign it to the current index if
+    when we extend it to the left, there are no
+    elements to the left that equal its height.
+    If the height of adjacent left elements are
+    equal to the height or greater, we use
+    the index of the left-most element that 
+    matches this condition.
+
+- After every element has been pushed on
+    the stack one from our first iteration,
+    we iterate a second time to account 
+    for max values of elements still on
+    the stack.
+
+- We can calculate various areas by going
+    through the stack and multiplying the
+    height value by the number of width 1
+    areas there are from the key index to
+    areas where there's at least that height. 
+    
+    - If we find an area greater than the
+    max area, we update the max area.
+
+- Since we only had to push elements and
+    pop elements once, the overall time 
+    complexity is O(n). Because we're using
+    a stack, the memory is going to be O(n).
