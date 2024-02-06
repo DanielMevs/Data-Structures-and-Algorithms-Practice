@@ -1,5 +1,8 @@
 class Solution:
-    def carFleet(self, target: int, position: list[int], speed: list[int]) -> int:
+    def carFleet(
+            self, target: int, position: list[int],
+            speed: list[int]
+            ) -> int:
         pair = [[pos, spd] for pos, spd in zip(position, speed)]
         stack = []
 

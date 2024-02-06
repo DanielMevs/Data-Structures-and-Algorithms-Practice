@@ -34,11 +34,11 @@ All the heights are in increasing order.
     for max values of elements still on
     the stack.
 
-- We can calculate various areas by going
-    through the stack and multiplying the
-    height value by the number of width 1
-    areas there are from the key index to
-    areas where there's at least that height. 
+- We can calculate various areas by 
+    multiplying the height value by the 
+    number of width 1 areas there are from
+    the key index to areas where there's
+    at least that height. 
     
     - If we find an area greater than the
     max area, we update the max area.
