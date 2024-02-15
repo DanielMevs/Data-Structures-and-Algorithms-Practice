@@ -1,5 +1,5 @@
 class Solution:
-    def minimizeMax(self, nums: List[int], p: int) -> int:
+    def minimizeMax(self, nums: list[int], p: int) -> int:
         
         def isValid(threshold):
             i, count = 0, 0
