@@ -16,7 +16,7 @@ class Solution:
         def dfs(node):
             if not node:
                 return 'null'
-            s = ', ' .join([str(node.val), dfs(node.left), dfs(node.right)])
+            s = ', '.join([str(node.val), dfs(node.left), dfs(node.right)])
             if len(subTrees[s]) == 1:
                 result.append(node)
             subTrees[s].append(node)
