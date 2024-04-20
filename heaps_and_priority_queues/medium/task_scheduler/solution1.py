@@ -13,17 +13,17 @@ class Solution:
         heapq.heapify(maxHeap)
 
         time = 0
-        queue = deque()  #pairs of [-count, idleTime]
+        queue = deque()  # pairs of [-count, idleTime]
 
         while maxHeap or queue:
             time += 1
 
             if maxHeap:
-                count = heapq.heappop(maxHeap)
+                count = 1 + heapq.heappop(maxHeap)
                 if count:
                     queue.append([count, time + n])
                 
-                if queue and queue[0][1] == time:
-                    heapq.heappush(maxHeap, queue.popleft()[0])
+            if queue and queue[0][1] == time:
+                heapq.heappush(maxHeap, queue.popleft()[0])
         
         return time
