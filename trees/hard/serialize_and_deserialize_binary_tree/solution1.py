@@ -5,6 +5,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 class Codec:
 
     def serialize(self, root):
