@@ -1,0 +1,20 @@
+First, we define a max heap called Small Heap and
+a min heap called Large Heap.
+
+By default, we can just add elements to the
+Small Heap until the length difference exceeds 1.
+
+We compare the max of the Small Heap and the min
+of the large heap. If the min of the Large Heap
+is less than the max of the Small Heap, we remove
+the max of the Small Heap and add it to the Large
+Heap. We repeat to see if the lengths are 
+approximately equal.
+
+Looking up the max and min for the heaps is O(1)
+and adding to and removing from a heap is O(logn)
+
+Finding the median takes O(1) time because we're 
+simply taking the max from the Small Heap, the 
+min from the Large Heap, adding them togther and
+dividing them by 2.
