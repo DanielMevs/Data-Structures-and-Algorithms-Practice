@@ -1,0 +1,26 @@
+Step 1: Sort zipped efficiency and speed engineer list by
+efficiency in descending order.
+
+Step 2: Initialize a Min Heap that will store the speeds
+of employees we iterate over and a result variable intended
+for the return value corresponding to the max performance.
+Also, initialize a speed variable which will be the running
+count of speed
+
+Step 3: Iterate through the sorted engineers list. At each
+iteration, increment the running speed variable by speed
+extracted from the current iteration of engineers.
+L> If the length of the Min Heap is equal to k, then we pop
+from the Heap the minimum speed, and subtract that speed with
+the running speed to make sure we are forming a team with 
+at most k engineers.
+
+Step 4: Push the updated running speed to the Min Heap
+
+Step 5: Calculate the performance by multiplying the 
+current efficiency with the running speed.
+L> If this calculation is greater than the current result,
+update the result variable to reflect this new maxiumum 
+performance value.
+
+Step 6: Mod the result with (10 ** 9 + 7) and return it
