@@ -1,0 +1,225 @@
+>>> result = []
+>>> nums = [3]
+>>> num = 2 
+>>> perms = [nums[:]] 
+>>> perms
+[[3]]
+>>> for perm in perms:
+...     perm.append(num)
+... 
+>>> perms
+[[3, 2]]
+>>> result.extend(perms)
+>>> result
+[[3, 2]]
+>>> nums.append(num)
+>>> nums
+[3, 2]
+>>> num = nums.pop(0)
+>>> num
+3
+>>> perms = [nums[:]]
+>>> for perm in perms:
+...     perm.append(num)
+...
+>>> perms
+[[2, 3]]
+>>> result.extend(perm)
+>>> result 
+[[3, 2], 2, 3]
+>>> result.pop()    
+3
+>>> result.pop()
+2
+>>> result
+[[3, 2]]
+>>> result.extend(perms)
+>>> result
+[[3, 2], [2, 3]]
+>>> nums.append(num)
+>>> nums
+[2, 3]
+>>> num = 1
+>>> perms = result
+>>> for perm in perms:
+...     perm.append(num)
+...
+>>> perms
+[[3, 2, 1], [2, 3, 1]]
+>>> result.extend(perms)
+>>> result
+[[3, 2, 1], [2, 3, 1], [3, 2, 1], [2, 3, 1]]
+>>> result.pop()
+[2, 3, 1]
+>>> result.pop()
+[3, 2, 1]
+>>> result
+[[3, 2, 1], [2, 3, 1]]
+>>> nums
+[2, 3]
+>>> nums.append(num)
+>>> nums
+[2, 3, 1]
+>>> num = nums.pop()
+>>> temp = []
+>>> num = nums.pop()
+>>> nums
+[2]
+>>> perms = [nums[:]]
+>>> perms
+[[2]]
+>>> for perm in perms:
+...     perm.append(num)
+...
+>>> perms
+[[2, 3]]
+>>> result
+[[3, 2, 1], [2, 3, 1]]
+>>> nums = [2, 3, 1]
+>>> num = nums.pop()
+>>> nums.append(num)
+>>> nums
+[2, 3, 1]
+>>> num = nums.pop(0)
+>>> num
+2
+>>> nums
+[3, 1]
+>>> temp
+[]
+>>> num = nums.pop(0)
+>>> perms = [nums[:]]
+>>> for perm in perms:
+...     perm.append(num)
+...
+>>> perms
+[[1, 3]]
+>>> temp.extend(perms)
+>>> temp
+[[1, 3]]
+>>> nums.append(num)
+>>> num = nums.pop(0)
+>>> nums
+[3]
+>>> perms = [num[:]]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not subscriptable
+>>> perms = [nums[:]]
+>>> for perm in perms:
+...     perm.append(perms)
+...
+>>> perms
+[[3, [...]]]
+>>> perm = [nums[:]]
+>>> perms = [nums[:]]
+>>> for perm in perms:
+...     perm.append(num)
+...
+>>> perms
+[[3, 1]]
+>>> temp.extend(perms)
+>>> nums.append(num)
+>>> temp
+[[1, 3], [3, 1]]
+>>> nums
+[3, 1]
+>>> num = 2
+>>> perms = temp
+>>> for perm in perms:
+...     perm.append(num)
+...
+>>> perms
+[[1, 3, 2], [3, 1, 2]]
+>>> result.extend(perms)
+>>> nums.append(num)
+>>> result
+[[3, 2, 1], [2, 3, 1], [1, 3, 2], [3, 1, 2]]
+>>> nums
+[3, 1, 2]
+>>> num = nums.pop(0)
+>>> temp = []   
+>>> num1 = nums.pop(0)  
+>>> nums    
+[2]
+>>> perms = [nums[:]]
+>>> for perm in perms:
+...     perm.append(num)
+...
+>>> perms
+[[2, 3]]
+>>> temp.extend(perms)
+>>> nums.append(num1)
+>>> num2 = nums.pop(0)
+>>> nums
+[1]
+>>> perms = [nums[:]]
+>>> perms
+[[1]]
+>>> for perm in perms:
+...     pass            
+...
+>>> nums = [2]
+>>> perms = [nums[:]]
+>>> perms
+[[2]]
+>>> for perm in perms:
+...     perm.append(num1)
+...
+>>> perm
+[2, 1]
+>>> temp
+[[2, 3]]
+>>> temp.pop()
+[2, 3]
+>>> temp    
+[]
+>>> perms           
+[[2, 1]]
+>>> temp.extend(perms)
+>>> temp
+[[2, 1]]
+>>> num2       
+2
+>>> num1
+1
+>>> num
+3
+>>> nums
+[2]
+>>> nums.append(num1) 
+>>> nums
+[2, 1]
+>>> num2 = nums.pop(0) 
+>>> nums    
+[1]
+>>> perms = [nums[:]]
+>>> perms
+[[1]]
+>>> for perm in perms:
+...     perm.append(num2)
+...
+>>> perms
+[[1, 2]]
+>>> temp.extend(perms)
+>>> temp
+[[2, 1], [1, 2]]
+>>> nums.append(num2)
+>>> nus
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'nus' is not defined. Did you mean: 'nums'?
+>>> nums
+[1, 2]
+>>> temp
+[[2, 1], [1, 2]]
+>>> perms = temp
+>>> for perm in perms:
+...     perm.append(num)
+...
+>>> perms
+[[2, 1, 3], [1, 2, 3]]
+>>> result.extend(perms)
+>>> result
+[[3, 2, 1], [2, 3, 1], [1, 3, 2], [3, 1, 2], [2, 1, 3], [1, 2, 3]]
+>>>
