@@ -1,0 +1,81 @@
+>>> result = []
+>>> from collections import Counter
+>>> arr = [1, 1, 2]
+>>> count = Counter(arr)
+>>> perm = [1]
+>>> count[1] -= 1
+>>> perm.append(1)
+>>> count[1] -= 1
+>>> perm.append(2)
+>>> count[2] -= 1
+>>> perm
+[1, 1, 2]
+>>> result.append(perm.copy())
+>>> result
+[[1, 1, 2]]
+>>> count[2] += 1
+>>> perm.pop()
+2
+>>> count[1] += 1
+>>> perm.pop()
+1
+>>> perm
+[1]
+>>> count
+Counter({1: 1, 2: 1})
+>>> perm.append(2)
+>>> count[2] -= 1
+>>> perm
+[1, 2]
+>>> count
+Counter({1: 1, 2: 0})
+>>> perm.append(1)
+>>> count[1] -= 1
+>>> perm
+[1, 2, 1]
+>>> result.append(perm)
+>>> result.pop()
+[1, 2, 1]
+>>> result.append(perm.copy())
+>>> result
+[[1, 1, 2], [1, 2, 1]]
+>>> count[1] += 1
+>>> perm.pop()
+1
+>>> perm
+[1, 2]
+>>> count
+Counter({1: 1, 2: 0})
+>>> count[2] += 1
+>>> perm.pop()
+2
+>>> result
+[[1, 1, 2], [1, 2, 1]]
+>>> perm
+[1]
+>>> count
+Counter({1: 1, 2: 1})
+>>> perm.pop()
+1
+>>> count[1] += 1
+>>> count
+Counter({1: 2, 2: 1})
+>>> perm.append(2)
+>>> count[2] -= 1
+>>> perm
+[2]
+>>> perm.append(1)
+>>> count[1] -= 1
+>>> count
+Counter({1: 1, 2: 0})
+>>> perm
+[2, 1]
+>>> perm.append(1)
+>>> count[1] -= 1
+>>> count
+Counter({1: 0, 2: 0})
+>>> perm
+[2, 1, 1]
+>>> result.append(perm)
+>>> result
+[[1, 1, 2], [1, 2, 1], [2, 1, 1]]
