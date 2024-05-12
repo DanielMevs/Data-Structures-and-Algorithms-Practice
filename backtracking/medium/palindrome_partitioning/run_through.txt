@@ -1,0 +1,83 @@
+>>> result = []
+>>> partition = []
+>>> i = 0
+>>> s = 'aab'
+>>> print('dfs call 1, iteration 0 to 3')
+dfs call 1, iteration 0 to 3
+>>> 'a' == 'a'[::-1]
+True
+>>> partition.append(s[0:1])
+>>> partition
+['a']
+>>> print('dfs call 2, iteration 1 to 3')
+dfs call 2, iteration 1 to 3
+>>> 'a' == 'a'[::-1]
+True
+>>> partition.append(s[1:2])
+>>> partition
+['a', 'a']
+>>> print('dfs call 3 iteration 2 to 3')
+dfs call 3 iteration 2 to 3
+>>> 'b' == 'b'[::-1]
+True
+>>> partition.append('b')
+>>> partition
+['a', 'a', 'b']
+>>> print('dfs call 4, base case reached')
+dfs call 4, base case reached
+>>> result.append(partition.copy())
+>>> print('returned from base case, dfs call 3')
+returned from base case, dfs call 3
+>>> partition.pop()
+'b'
+>>> print('iteration for dfs call 3 finished')
+iteration for dfs call 3 finished
+>>> print('return to dfs call 2, iteration 1 to 3')
+return to dfs call 2, iteration 1 to 3
+>>> partition.pop()
+'a'
+>>> i
+0
+>>> print('dfs call 2, i = 1, j = 2')
+dfs call 2, i = 1, j = 2
+>>> 'ab' == 'ab'[::-1]
+False
+>>> print('return from dfs call 2, dfs call 1, i = 0, j =0')
+return from dfs call 2, dfs call 1, i = 0, j =0
+>>> partition.pop()
+'a'
+>>> partition
+[]
+>>> print('dfs call 1, i =0, j = 1')
+dfs call 1, i =0, j = 1
+>>> 'aa'=='aa'[::-1]
+True
+>>> partition.append('aa')
+>>> print('dfs call 5, j = 1 => i = 2')
+dfs call 5, j = 1 => i = 2
+>>> 'b' == 'b'[::-1]
+True
+>>> partition.append('b')
+>>> print('dfs call 6, base case reached')
+dfs call 6, base case reached
+>>> result.append(partition.copy())
+>>> result
+[['a', 'a', 'b'], ['aa', 'b']]
+>>> print('return to dfs call 5')
+return to dfs call 5
+>>> partition.pop()
+'b'
+>>> print('dfs call 5, end of iteration reached')
+dfs call 5, end of iteration reached
+>>> print('return to dfs call 1, i = 0, j = 1')
+return to dfs call 1, i = 0, j = 1
+>>> partition.pop()
+'aa'
+>>> print('dfs call 1, i = 0, j = 2')
+dfs call 1, i = 0, j = 2
+>>> 'aab'=='aab'[::-1]
+False
+>>> print('dfs call 1, end of iteration reached, return')
+dfs call 1, end of iteration reached, return
+>>> result
+[['a', 'a', 'b'], ['aa', 'b']]
