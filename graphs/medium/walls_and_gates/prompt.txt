@@ -1,0 +1,6 @@
+Given an m x n grid
+where the possible values are:
+- -1: a wall/obstacle
+- 0: a gate
+- INF: empty room
+    L> the value (2^31) - 1 is used
