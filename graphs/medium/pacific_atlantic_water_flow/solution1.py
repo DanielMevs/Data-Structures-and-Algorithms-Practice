@@ -6,8 +6,8 @@ class Solution:
         def dfs(r, c, visited, prevHeight):
             if ((r, c) in visited or
                 r < 0 or c < 0 or r == ROWS 
-                or c == COLS or
-                heights[r][c] < prevHeight):
+                    or c == COLS or
+                    heights[r][c] < prevHeight):
                 return
             visited.add((r, c))
             dfs(r + 1, c, visited, heights[r][c])
