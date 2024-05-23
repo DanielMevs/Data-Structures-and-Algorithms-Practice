@@ -1,6 +1,6 @@
 class Solution:
     def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
-        anagramDict ={}
+        anagramDict = {}
         for i in range(len(strs)):
             word = self.helper(strs[i])
             if word not in anagramDict:

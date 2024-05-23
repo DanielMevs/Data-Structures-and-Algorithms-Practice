@@ -1,7 +1,7 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         charStack = []
-        closing_dict = {'}': '{', ')': '(', ']':'['}
+        closing_dict = {'}': '{', ')': '(', ']': '['}
         
         for char in s:
             if char in closing_dict:

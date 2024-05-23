@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
         res = defaultdict(list)
@@ -10,7 +11,6 @@ class Solution:
             for char in string:
                 count[ord(char) - ord("a")] += 1
             
-          
             res[tuple(count)].append(string)
 
         return res.values()

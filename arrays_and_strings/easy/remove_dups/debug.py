@@ -17,7 +17,8 @@ class Solution(object):
         print(f'Nums at the end: {nums}')
         return k
     
-nums = [1,1,2]
+
+nums = [1, 1, 2]
 
 remDup = Solution()
 remDup.removeDuplicates(nums=nums)
