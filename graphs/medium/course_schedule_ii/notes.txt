@@ -1,0 +1,6 @@
+- A course has 3 possible states:
+- Visited -> course has been added to output
+- Visiting -> course not added to output,
+  but added to cycle
+- Unvisited -> course not added to output
+  or cycle.
