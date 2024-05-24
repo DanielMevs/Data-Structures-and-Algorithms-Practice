@@ -1,0 +1,7 @@
+The running area will be calculated
+by taking the minimum value
+between left and right 
+(i.e. the bottleneck) and
+multiplying it my the 
+difference between right
+and left

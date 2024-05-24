@@ -1,0 +1,38 @@
+Graph Valid Tree
+
+Given n nodes labeled 0 to n-1 and
+a list of undirected edges (each
+edge is a pair of nodes), write a 
+function to check whether these
+edges make up a valid tree.
+
+Trees are valid graphs if they do
+not contain loops/cycles and every
+node is connected (there are no 
+orphan nodes).
+
+Return true if we get an empty 
+graph
+
+If the number of nodes visited 
+equals the number of nodes 
+given to us, then we know for
+sure the graph is valid.
+
+To avoid any false positive loop
+detections, we're going to keep
+track of a previous node
+
+Our base case is that the node
+we are currently on does not have
+any neighbors besides its previous
+node. Then we return true.
+
+The node we start off our DFS 
+algorithm with can have a default 
+previous value of -1.
+
+By the end of the algorithm, we
+return true if the length of the
+visited set is equal to the number
+of nodes that were give.
