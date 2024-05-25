@@ -1,0 +1,2 @@
+If we have n nodes and n edges, we
+are guarenteed a cycle.

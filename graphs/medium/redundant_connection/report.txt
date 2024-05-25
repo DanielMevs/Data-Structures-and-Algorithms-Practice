@@ -1,0 +1,29 @@
+
+Union Find
+
+- We create an array of integers called
+parents where parents[i] = the parent of
+the ith node. Initially, it is set with
+the node values themselves, denoting that
+the ith node is a parent of itself.
+
+- We also create an array called rank 
+where rank[i] indicates how many
+nodes considered that ith node to
+be its parent. Initially, it is set
+to all 1's.
+
+- We go through the input array and if 
+we find that a node is the parent of 
+another secondary node, we change the
+parent value at that secondary node's 
+ith index to be the parent node's value.
+We also increment the rank value at the 
+ith index of the parent node.
+
+- If we get to a case where we are given
+two nodes (an edge) we find that they 
+have the same parent (which can be found 
+in the parent array), it means that they
+are already connected and we can identify
+and return that edge as our redundant edge.
