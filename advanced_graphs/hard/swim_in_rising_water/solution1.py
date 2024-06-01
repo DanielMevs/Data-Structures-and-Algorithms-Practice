@@ -5,7 +5,7 @@ class Solution:
     def swimInWater(self, grid: list[list[int]]) -> int:
         N = len(grid)
         visited = set()
-        minHeap = [[grid[0][0], 0, 0]] # (time/max-height, r, c)
+        minHeap = [[grid[0][0], 0, 0]]  # (time/max-height, r, c)
         directions = [[0, 1], [0, -1], [1, 0], [-1, 0]]
 
         visited.add((0, 0))
