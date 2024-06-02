@@ -1,0 +1,47 @@
+Brute Force Solution
+
+[ 10, 15, 20 ]
+  0   1   2    3
+
+              0
+        10 /     \ 10
+       ➡️1       2
+      15 / \15   / 20  
+        2   3   3
+   20 /   ❌25 30
+     3    ✅15
+  ❌45
+  ✅35 
+
+Decision tree (above) starting
+at 0. We Don't have to recompute
+a separate decision tree with root
+at 1 because we can reuse a subtree
+that was already computer (repeated
+work). When we eleminate repeated
+work using a cache, the time complexity
+goes from O(2^n) where n is equal to 
+the length of the cost array to O(n).
+The time complexity would also be 
+O(n).
+
+
+Dynamic Programming Solution
+
+- Iterate through the array in reverse
+order, computing the running cost by
+modifying the currect index by the 
+minimum of the costs at the next two
+indices. 
+- When we initially start, we
+set the point where the array becomes
+out of bounds with a default value
+of zero. 
+- After we have iterated
+to the begining of the array, we 
+return the minimum cost that was
+computed for either first or second
+element of the input array.
+
+The space complexity is O(1) and
+the time complexity is O(n)
