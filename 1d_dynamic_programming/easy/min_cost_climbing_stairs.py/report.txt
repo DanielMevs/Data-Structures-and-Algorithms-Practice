@@ -22,7 +22,7 @@ work). When we eleminate repeated
 work using a cache, the time complexity
 goes from O(2^n) where n is equal to 
 the length of the cost array to O(n).
-The time complexity would also be 
+The space complexity would also be 
 O(n).
 
 
