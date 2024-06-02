@@ -17,7 +17,7 @@ Decision tree (above) starting
 at 0. We Don't have to recompute
 a separate decision tree with root
 at 1 because we can reuse a subtree
-that was already computer (repeated
+that was already computed (repeated
 work). When we eleminate repeated
 work using a cache, the time complexity
 goes from O(2^n) where n is equal to 
