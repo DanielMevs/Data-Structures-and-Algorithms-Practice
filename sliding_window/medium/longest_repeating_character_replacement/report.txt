@@ -7,7 +7,7 @@ to k, we know we have a valid sub-
 string
 - So then, we increment the right
 pointer by 1.
-- We addthe count of the character
+- We add the count of the character
 at the current right index and
 recompute whether we have a valid
 window or not.
@@ -24,13 +24,13 @@ of our current window.
 
 - We can make a slight optimization
 by keeping a most frequent variable,
-computedby taking the max of itself
+computed by taking the max of itself
 and the count of the element at index
 right. 
 - That way, we don't have to recompute
 the most frequent character by going
 through the entire list of values of
-the count dictionary (a O(26) operation
+the count dictionary (O(26) operation
 where 26 = letters in alphabet).
 
 This leaves us with a O(n) time and
