@@ -1,0 +1,42 @@
+- You are given an array of integers, 
+nums, where the value nums[i] repre-
+sents the amount of money you can 
+steal fro the ith house.
+- Constraint: if we rob adjacent
+house the same night, a security
+alarm will go off. 
+- Return the maximum amount of 
+money we can rob in 1 night w/out
+alerting the police.
+
+- When we compute the running max of
+the money we could steal, we are asking
+ourselves 2 questions (as we iterate
+through the array):
+
+1. Should we rob the current house and
+add that to the running sum we calculated
+two houses ago?
+
+2. Should we not rob the current house
+and take the running max at the prev-
+iously visited house?
+
+- We determine this by taking the opt-
+ion that will give us the max value at
+the current house.
+
+- The value we can steal from house 1
+will be called rob1 and the value we
+can steal from house 2 will be rob2.
+
+- We store the max option in a variable 
+called temp.
+
+- We assign rob1 equal to rob2 and
+set rob2 every time to be equal to
+temp.
+
+- By the end of our iteration, temp
+will have the max amount of money we
+can rob given our constraint.

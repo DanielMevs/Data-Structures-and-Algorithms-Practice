@@ -10,7 +10,6 @@ class Solution:
             window_size = (right - left + 1)
             max_freq = self.get_most_freq_char_count(count)
 
-
             if window_size - max_freq > k:
 
                 count[s[left]] -= 1
@@ -19,7 +18,6 @@ class Solution:
         window_size = (right - left + 1)
 
         return window_size
-    
     
     def get_most_freq_char_count(self, count):
         return max(count.values())

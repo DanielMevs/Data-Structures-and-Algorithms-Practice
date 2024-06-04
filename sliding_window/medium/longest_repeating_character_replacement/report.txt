@@ -1,0 +1,38 @@
+- Size of window minus the count of 
+most  frequent character is equal to
+the number of characters we need to 
+replace.
+- If this number is less than or equal
+to k, we know we have a valid sub-
+string
+- So then, we increment the right
+pointer by 1.
+- We addthe count of the character
+at the current right index and
+recompute whether we have a valid
+window or not.
+- If we do not have a valid sub-
+string, meaning the number of
+characters to replace exceeds k,
+we decrement the count of the element
+at index left and increment the 
+left count (keeping the right pointer
+the same).
+- If it is, we update our result to
+be the max of itself and the length
+of our current window.
+
+- We can make a slight optimization
+by keeping a most frequent variable,
+computedby taking the max of itself
+and the count of the element at index
+right. 
+- That way, we don't have to recompute
+the most frequent character by going
+through the entire list of values of
+the count dictionary (a O(26) operation
+where 26 = letters in alphabet).
+
+This leaves us with a O(n) time and
+space complexity.
+
