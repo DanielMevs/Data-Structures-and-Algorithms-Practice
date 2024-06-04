@@ -1,7 +1,7 @@
 - You are given an array of integers, 
 nums, where the value nums[i] repre-
 sents the amount of money you can 
-steal fro the ith house.
+steal from the ith house.
 - Constraint: if we rob adjacent
 house the same night, a security
 alarm will go off. 
