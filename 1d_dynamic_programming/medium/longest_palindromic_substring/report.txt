@@ -1,0 +1,39 @@
+To find if a substring is a palindrome we can
+either:
+
+1. Have two pointers start on opposite ends 
+of the string, and for every iteration, move
+those pointers by 1 toward the center, check-
+ing if both elements at the left and right
+pointers are equal at each step.
+
+2. Have two pointers start at the center
+of the string, and we fan those pointers
+out toward the ends of the string for 
+every iteration, checking if both elements
+at the given pointers are equal at each
+step.
+
+- Option 2 is our preferred method as it 
+will decrease our time complexity from
+O(n^3) to O(n^2).
+
+- We can call our pointers left and right,
+where left will fan out to the left and
+right to the right.
+
+- Our constraints are that left cannot go
+below 0 and right cannot go above the
+length of the string minus 1 (out of bounds).
+
+- Also, we keep a running max of the substring
+window size and update it everytime we find
+a window greater than the current max.
+
+- We also have to take into account whether
+we start left and right at the same index,
+as this will result in an odd length sub-
+string.
+
+- To account for even length substrings, we
+set left and right to adjacent indices.
