@@ -13,8 +13,7 @@ class Solution:
                 return True
             else:
                 left_window, right_window = left_window + 1, right_window + 1
-            
-            
+               
         return False
 
 
