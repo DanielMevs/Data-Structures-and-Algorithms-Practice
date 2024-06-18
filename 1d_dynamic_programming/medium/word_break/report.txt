@@ -1,0 +1,57 @@
+s = "veetcode";
+wordDict = ["veet",
+            "leet",
+            "code"]
+            
+            i=0
+          /  |  \
+      veet  leet code
+      i=4    X
+     / | \
+    /  |  \
+ veet leet code
+  X    X    i=8
+
+Once i = len(s) + 1, then we can
+return true because we have reached
+the end of the string, s.
+Thus, this is our base case.
+
+dp[8] = true
+
+With a bottom up approach, go in
+reverse order, from end to start,
+and determine whether a string
+at the descending index, i, of s 
+can be found in one of the words
+in wordDict.
+
+i = 7
+s = "veetcode" 
+L> "e" does not match any of the 
+strings in wordDict: ["veet",
+                      "leet",
+                      "code"]
+
+dp[8] = true
+dp[7] = false
+dp[6] = dp[5] = false
+L> "de" and "ode" don't match
+
+dp[4] = true; "code" is in wordDict
+dp[3] = false; "tcode" notin wordDict
+
+dp[3] = dp[2] = dp[1] = false;
+L> We cannot word break this string
+if we start at any of these positions
+
+dp[0] = dp[0 + len(w)] = dp[0+4] = true
+L> From index 0-4, we were able to match
+veet and from 4 + len(x), we were able
+to match code, where w="veet" and
+ x="code".
+
+ Note: we already computed dp[4] and
+ determined that it was true.
+
+
