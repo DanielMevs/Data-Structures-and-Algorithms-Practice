@@ -1,0 +1,11 @@
+If we sum the entire array and divide it
+by two, we get our target.
+This target represents the sum of each
+respective subset.
+Observation: if the sum is an odd number,
+we know we can return false 
+
+Also, if we iterate through the list
+and find that one of the values equals
+the target, we can immediately return 
+true.

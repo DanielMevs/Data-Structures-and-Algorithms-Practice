@@ -1,0 +1,30 @@
+Two solve this problem, we can have a 
+set and a target calculated by
+taking half of the total sum of 
+our input array.
+We first iterate through this list of
+integers backwards. 
+
+nums = [ 1, 5, 11, 5 ]
+target = 11
+
+We can either include 5 in
+our subarray or we don't.
+=> we had 0 or 5 to our set.
+As we iterate backwards, we 
+take the current element of
+our list and add it to every
+element that's currently in
+our set and add this result
+to our set.
+If we ever get a scenario where
+one of the values in our set
+is equal to target, we can
+return true.
+
+set = {0, 5, 11, 16, 10, 21, 
+    1, 6, 12, 17, 22}
+
+If we build this set and it 
+does not contain our target,
+we return false.
