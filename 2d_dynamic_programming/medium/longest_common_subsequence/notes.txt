@@ -1,0 +1,24 @@
+We create a 2 dimensional grid with
+out-of-bound values initialized to 0.
+The rows, denoted by i, will rep-
+resent the ith character of 
+text1 and the column, denoted
+by j, will represent the jth
+character of text2.
+
+We iterate in reverse starting
+from the last row, last column.
+
+If the characters at the current
+i and j match indices each other, 
+we look at the value to its dia-
+gonal and add 1 to it.
+
+If the characters at the current
+i and j indices match each other,
+we take the max between the value
+direct below it and directly to
+the right of it.
+
+We repeat until we reach i = 0
+and j = 0 (top left of the grid).
