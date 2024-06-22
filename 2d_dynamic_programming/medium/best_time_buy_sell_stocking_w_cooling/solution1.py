@@ -4,7 +4,7 @@ class Solution:
         # If Buy -> i + 1
         # If sell -> i + 2
 
-        cache = {} # key=(i, buying) val=max_profit
+        cache = {}  # key=(i, buying) val=max_profit
 
         def dfs(i, buying):
             if i >= len(prices):
