@@ -19,8 +19,7 @@ class Solution:
                     # - Done to skip duplicates, high goes backwards
                     while low < high and nums[low] == nums[low - 1]:
                         low += 1
-                    
-                
+                           
                 else:
                     low += 1
         return three_sum_list
