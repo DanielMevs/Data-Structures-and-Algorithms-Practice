@@ -6,7 +6,7 @@ class Solution:
             range(5, 9): ('V', 5),
             range(9, 10): ('IX', 9),
             range(10, 40): ('X', 10),
-            range(40, 50): ('XL', 40),
+            range(40, 50): ('IL', 40),
             range(50, 90): ('L', 50),
             range(90, 100): ('XC', 90),
             range(100, 400): ('C', 100),
@@ -20,6 +20,9 @@ class Solution:
             if numKey == 0:
                 return ('', 0)
             for numRange in charDict.keys():
+                print('*'*29)
+                print(numRange)
+                print(numKey)
                 if numKey in numRange:
                     return charDict[numRange]
 
@@ -33,9 +36,12 @@ class Solution:
         def get_roman_numeral(keyNum, decimalPlace):
             result = ''
             sigFig = keyNum * (10**decimalPlace)
-            while sigFig:
-                
+            while sigFig >= 0 and sigFig != 370779840:
                 romanChar, decr = get_roman_and_decr(sigFig)
+                print(decr)
+                print(sigFig)
+                if decr == 0:
+                    break
                 result += romanChar
                 sigFig -= decr
                 
@@ -44,9 +50,9 @@ class Solution:
         result = ''
         for i in range(get_num_length(num) - 1, - 1, -1):
             result += get_roman_numeral(num//(10**i), i)
-            
-            num -= ((num // (10**i)) * (10**i))
-            
+            num -= num * (10**i)
+        
         return result
 
 
+print(Solution().intToRoman(num=3749))
