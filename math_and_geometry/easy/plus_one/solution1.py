@@ -11,14 +11,12 @@ class Solution:
 
             if digits[i] == 9 and not is_placed:
                 digits[i] = 0
-                
-                
+                               
             elif digits[i] != 9 and not is_placed:
                 carry = 1
                 is_placed = True
                 digits[i] = digits[i] + carry
-                
-            
+                        
             elif digits[i] == 9 and is_placed:
                 carry = 0
                 digits[i] = digits[i] + carry
@@ -27,9 +25,7 @@ class Solution:
                 carry = 0
                 digits[i] = digits[i] + carry
                 
-
             i -= 1
-
 
         if not is_placed:
             digits = [carry] + digits
