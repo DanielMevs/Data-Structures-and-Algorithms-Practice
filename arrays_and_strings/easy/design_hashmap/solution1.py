@@ -4,6 +4,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class MyHashMap:
 
     def __init__(self):

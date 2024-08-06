@@ -12,10 +12,9 @@ class Solution:
         self.helper(l, r, nums)
         l, r = k, len(nums) - 1
         self.helper(l, r, nums)
-        
-        
-    def helper(self, l, r, nums):
-        while l < r:
-            nums[l], nums[r] = nums[r], nums[l]
-            l, r = l + 1, r - 1
+          
+    def helper(self, left, right, nums):
+        while left < right:
+            nums[left], nums[right] = nums[right], nums[left]
+            left, right = left + 1, right - 1
         
