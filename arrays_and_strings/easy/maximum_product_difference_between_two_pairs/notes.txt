@@ -1,0 +1,19 @@
+Goal: maximize ((a * b) - (c * d))
+where a, b, c, d are distinct elements
+in the input array
+
+Strategy: maximize (a * b) and
+minimize (c * d) by finding the 2
+maxium elements and the 2 minimum
+elements
+- To get these, we can just sort
+the input array and get the elements
+we need from the beggining and end of
+the array
+L> downside: O(nlogn) time
+
+O(n) time O(n) space solution?
+L> yes.
+Create a Max Heap and a Min Heap
+L> Heapify -> O(n)
+L> Get max/min -> O(1)
