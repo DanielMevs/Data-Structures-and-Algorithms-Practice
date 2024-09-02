@@ -15,3 +15,4 @@ class Solution:
             if n > 0 and i + 1 != result[0]:
                 result[1] = i + 1
                 return result
+            

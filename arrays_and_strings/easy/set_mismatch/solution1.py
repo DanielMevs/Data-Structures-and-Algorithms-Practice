@@ -15,3 +15,4 @@ class Solution:
                 result[0] = i
 
         return result
+    
