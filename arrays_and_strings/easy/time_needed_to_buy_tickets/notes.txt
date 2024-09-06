@@ -1,0 +1,13 @@
+- tickets[k] is our bottleneck
+
+- If i <= k:
+    - If tickets[i] > tickets[k]
+        L> Add tickets[k] to the result
+    - If tickets[i] <= tickets[k]
+        L> Add tickets[i] to the result
+    
+- If i > k
+    - If tickets[i] < tickets[k]
+        L> Add tickets[i] to the result
+    - If tickets[i] >= tickets[k] 
+        L> Add tickets[k] - 1 to the result
