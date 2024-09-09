@@ -1,0 +1,5 @@
+Although count(n) is a linear time operation,
+since we can at most have 2 numbers whose count are
+greater than 1/3 of the size of the input array,
+we are doing it at most 2 times. 2*O(n) boils
+down to O(n)
