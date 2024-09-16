@@ -12,3 +12,4 @@ class Solution:
             result.append(nums[i:i + 3])
         
         return result
+    
