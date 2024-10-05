@@ -15,3 +15,4 @@ class Solution:
             result = max(result, right - left)
 
         return result
+    
