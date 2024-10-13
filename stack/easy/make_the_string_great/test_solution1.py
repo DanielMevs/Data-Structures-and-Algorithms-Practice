@@ -32,15 +32,16 @@ def main():
     print(timeit.timeit(badPairDetector.is_bad_pair_v2, number=1000000))
     print(timeit.timeit(badPairDetector.is_bad_pair_v3, number=1000000))
     print('---'*10)
-    badPairDetector2 = BadPairDetector('a', 'b')
 
+    badPairDetector2 = BadPairDetector('a', 'b')
     # Time the performance of the is_bad_pair_v2 method
     print(timeit.timeit(badPairDetector2.is_bad_pair, number=1000000))
     print(timeit.timeit(badPairDetector2.is_bad_pair_v2, number=1000000))
     print(timeit.timeit(badPairDetector2.is_bad_pair_v3, number=1000000))
     print('---'*10)
-    
+
     badPairDetector3 = BadPairDetector('A', 'a')
+    # Time the performance of the is_bad_pair_v3 method
     print(timeit.timeit(badPairDetector3.is_bad_pair, number=1000000))
     print(timeit.timeit(badPairDetector3.is_bad_pair_v2, number=1000000))
     print(timeit.timeit(badPairDetector3.is_bad_pair_v3, number=1000000))
