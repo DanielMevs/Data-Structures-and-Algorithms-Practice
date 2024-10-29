@@ -1,0 +1,12 @@
+quality = [10, 20, 5]   rates = 7, 2.5, 6
+wage = [70, 50, 30]
+
+pairs = [(7, 10), (2.5 20), (6, 5)]
+sorted = [(2.5, 20), (6, 5), (7, 10)]
+
+max_heap= []; tot_qual = 0;
+max_heap = [20]; total_qual = 20;
+max_heap = [5, 20]; total_qual = 25; res = 25 * 6 = 150
+max_heap = [5, 10, 20]; total_qual=35;
+max_heap = [5, 10]; total_qual-= 20 = 15;
+res = 15 * 7 = 105 
