@@ -27,7 +27,7 @@ class Solution:
                 return 0
             result = backtrack(i + 1)  # skip
             # include (when possible)
-            if can_form_word(words[i], letter_count): 
+            if can_form_word(words[i], letter_count):
                 for char in words[i]:
                     letter_count[char] -= 1
                 result = max(result, get_score(words[i]) + backtrack(i + 1))
