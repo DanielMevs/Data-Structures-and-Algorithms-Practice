@@ -8,7 +8,7 @@ class Solution:
         # count outgoing edges
         edges = {(a, b) for a, b in connections}
         neighbors = {city: [] for city in range(n)}
-        visted = set()
+        visited = set()
         changes = 0
 
         for a, b in connections:
@@ -16,17 +16,17 @@ class Solution:
             neighbors[b].append(a)
 
         def dfs(city):
-            nonlocal edges, neighbors, visted, changes
+            nonlocal edges, neighbors, visited, changes
 
             for neighbor in neighbors[city]:
-                if neighbor in visted:
+                if neighbor in visited:
                     continue
                 # Check if this neighbor can reach city 0
                 if (neighbor, city) not in edges:
                     changes += 1
-                visted.add(neighbor)
+                visited.add(neighbor)
                 dfs(neighbor)
 
-        visted.add(0)
+        visited.add(0)
         dfs(0)
         return changes
