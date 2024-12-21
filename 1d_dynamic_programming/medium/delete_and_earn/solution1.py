@@ -17,7 +17,7 @@ class Solution:
                 earn1 = temp
             else:
                 temp = earn2
-                earn2 = currEarn = earn2
+                earn2 = currEarn + earn2
                 earn1 = temp
 
         return earn2
