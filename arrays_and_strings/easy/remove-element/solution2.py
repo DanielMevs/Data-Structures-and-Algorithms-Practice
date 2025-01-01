@@ -9,7 +9,5 @@ class Solution:
             if i < len(nums) and nums[i] == val:
                 i -= 1
             i += 1
-            
-        
-        
+
         return len(nums)
