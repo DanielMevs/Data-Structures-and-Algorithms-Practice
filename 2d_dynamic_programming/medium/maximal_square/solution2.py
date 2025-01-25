@@ -3,23 +3,17 @@ from typing import List
 
 class Solution:
     def maximalSquare(self, matrix: List[List[str]]) -> int:
+        if not matrix or not matrix[0]:
+            return 0
+
         ROWS, COLS = len(matrix), len(matrix[0])
-        cache = {}  # map each (row, col) to the max length of square
+        dp = [[0] * (COLS + 1) for _ in range(ROWS + 1)]
+        max_side_length = 0
 
-        # Runtime complexity: O(m*n), memory complexity: O(m*n)
-        def helper(r, c):
-            if r >= ROWS or c >= COLS:
-                return 0
-            if (r, c) not in cache:
-                down = helper(r + 1, c)
-                right = helper(r, c + 1)
-                diag = helper(r + 1, c + 1)
+        for r in range(1, ROWS + 1):
+            for c in range(1, COLS + 1):
+                if matrix[r - 1][c - 1] == "1":
+                    dp[r][c] = min(dp[r-1][c], dp[r][c-1], dp[r-1][c-1]) + 1
+                    max_side_length = max(max_side_length, dp[r][c])
 
-                cache[(r, c)] = 0
-                if matrix[r][c] == "1":
-                    cache[(r, c)] = 1 + min(down, right, diag)
-
-            return cache[(r, c)]
-
-        helper(0, 0)
-        return max(cache.values()) ** 2
+        return max_side_length ** 2
