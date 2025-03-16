@@ -1,5 +1,5 @@
 from typing import List
-from sortedcontainers import SortedSet
+from sortedcontainers import SortedSet  # type: ignore
 
 
 class SummaryRanges:
