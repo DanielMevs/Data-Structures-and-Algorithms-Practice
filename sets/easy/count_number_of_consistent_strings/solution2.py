@@ -10,5 +10,5 @@ class Solution:
                 if c not in allowed:
                     result -= 1
                     break
-        
+
         return result
