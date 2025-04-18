@@ -1,0 +1,10 @@
+- Solution 1 time complexity: O(n + m + nlogn)
+- Solution 2 time complexity: O(n + m + M) 
+
+M: the maximum value in arr1
+m: length of arr1
+n: length of arr2
+
+Solution 2 is more efficient if M is smaller relative to 
+to n and m as it avoids sorting. However, if M is significantly
+larger than n and m, Solution1 is more efficient.
