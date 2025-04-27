@@ -1,0 +1,23 @@
+nums = [3, 1, 4, 2]
+p = some value
+
+total = sum(nums)
+remain = total % p  # This is what we need to remove
+if remain == 0:
+    return 0  # Already divisible by p
+
+# We need to find a subarray whose sum equals 'remain'
+target = remain
+
+# As we iterate through the array, we track prefix sums
+current = (running sum) % p
+
+# We want: (current - some_previous_prefix) % p = target
+# Rearranging: some_previous_prefix = (current - target) % p
+
+# Hashmap stores: prefix_sum % p -> index
+
+When we find a prefix_sum in the hasmap that equals to the target,
+we subtract the current index with the index stored at this prefix_sum,
+which will tell us the length of the subarray, and store that as the
+result. We take the minimum of such results.
