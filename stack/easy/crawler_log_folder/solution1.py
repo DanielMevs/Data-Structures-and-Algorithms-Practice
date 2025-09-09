@@ -8,7 +8,7 @@ class Solution:
         for folder in logs:
             if folder == './':
                 continue
-            if folder == '../':
+            elif folder == '../':
                 stack.pop() if stack else 0
             else:
                 stack.append(folder)
